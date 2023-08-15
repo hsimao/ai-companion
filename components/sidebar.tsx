@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Home, Plus, Settings } from 'lucide-react'
 
-export default function Sidebar() {
+export const Sidebar = () => {
   const pathname = usePathname()
   const router = useRouter()
 

@@ -1,23 +1,24 @@
 import Link from 'next/link'
 import { Poppins } from 'next/font/google'
 
-import { Menu, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { UserButton } from '@clerk/nextjs'
 
 import { cn } from '@/lib/utils'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Button } from '@/components/ui/button'
+import MobileSidebar from '@/components/mobile-sidebar'
 
 const font = Poppins({
   weight: '600',
   subsets: ['latin'],
 })
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <div className="fixed z-50 flex h-16 w-full items-center justify-between border-b border-primary/10 bg-secondary px-4 py-2">
       <div className="flex items-center">
-        <Menu className="block md:hidden" />
+        <MobileSidebar />
         <Link href="/">
           <h1
             className={cn(
@@ -40,5 +41,3 @@ const Navbar = () => {
     </div>
   )
 }
-
-export default Navbar
