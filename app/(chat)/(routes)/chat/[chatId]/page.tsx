@@ -34,7 +34,6 @@ const ChatIdPage = async ({ params }: ChatIdPageProps) => {
       },
     },
   })
-  console.log('companion', companion)
 
   if (!companion) return redirect('/')
 
