@@ -241,31 +241,6 @@ export const CompanionForm = ({
             <Separator className="bg-primary/10" />
           </div>
 
-          {/* Seed */}
-          <FormField
-            name="seed"
-            control={form.control}
-            render={({ field }) => (
-              <FormItem className="col-span-2 md:col-span-1">
-                <FormLabel>Example Conversation</FormLabel>
-                <FormControl>
-                  <Textarea
-                    className="resize-none bg-background"
-                    rows={7}
-                    disabled={isLoading}
-                    placeholder={SEED_CHAT}
-                    {...field}
-                  />
-                </FormControl>
-                <FormDescription>
-                  Write couple of examples of a human chatting with your AI
-                  companion, write expected answers.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
           {/* Instructions */}
           <FormField
             name="instructions"
@@ -285,6 +260,31 @@ export const CompanionForm = ({
                 <FormDescription>
                   Describe in detail your companion&apos;s backstory and
                   relevant details.
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Seed */}
+          <FormField
+            name="seed"
+            control={form.control}
+            render={({ field }) => (
+              <FormItem className="col-span-2 md:col-span-1">
+                <FormLabel>Example Conversation</FormLabel>
+                <FormControl>
+                  <Textarea
+                    className="resize-none bg-background"
+                    rows={7}
+                    disabled={isLoading}
+                    placeholder={SEED_CHAT}
+                    {...field}
+                  />
+                </FormControl>
+                <FormDescription>
+                  Write couple of examples of a human chatting with your AI
+                  companion, write expected answers.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
