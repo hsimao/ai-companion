@@ -49,7 +49,6 @@ export const SearchInput = () => {
         placeholder="Search..."
         className="bg-primary/10 pl-10"
       />
-      {debouncedValue}
     </div>
   )
 }
