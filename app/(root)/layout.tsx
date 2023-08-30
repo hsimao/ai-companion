@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/navbar'
+import { Navbar } from '@/components/AppNavbar'
 import { Sidebar } from '@/components/sidebar'
 import { checkSubscription } from '@/lib/subscription'
 
